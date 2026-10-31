@@ -1,15 +1,17 @@
+//-----------------------------------------------------------------------------
+// Group Members: Pramit Patel, Rohan Karve
+// Date: Oct 30, 2026
+// Course: Data Structures and Algorithm Analysis (CSCI 3200)
+// Project Description: Project 3 - Uses a reference-based linked list stack to
+// convert infix expressions to postfix and postfix expressions to infix. A menu
+// lets the user keep converting expressions until they enter 0.
+//-----------------------------------------------------------------------------
 package CSCI3200;
 
 import java.util.Scanner;
 
 // main executable class with console menu loop
 public class ConvertInfixAndPostfix {
-    // 
-    // Group Members: Pramit Patel, Rohan Karve
-    // Date: Oct 30, 2026
-    // Course: Data Structures and Algorithm Analysis (CSCI 3200)
-    // Project Description: Project 3 - Convert Infix and Postfix Expressions
-    //
 
     // main method to run the program loop
     public static void main(String[] args) {
@@ -18,11 +20,11 @@ public class ConvertInfixAndPostfix {
         int choice;
 
         do {
-            System.out.println("////////////////////");
-            System.out.println("/ 0: Exit");
-            System.out.println("/ 1: Infix to Postfix");
-            System.out.println("/ 2: Postfix to Infix");
-            System.out.println("////////////////////");
+            System.out.println("//////////////////////////////////////");
+            System.out.println("/ 0: Exit                            /");
+            System.out.println("/ 1: Infix to Postfix                /");
+            System.out.println("/ 2: Postfix to Infix                /");
+            System.out.println("//////////////////////////////////////");
             System.out.print("Enter a choice: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // consume newline

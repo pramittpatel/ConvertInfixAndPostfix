@@ -43,9 +43,10 @@ public class InfixAndPostfix {
         return token.equals(")");
     }
 
-    // checks if the given character is a valid operator
-    public boolean isOperator(char operator) {
-        return operator == '+' || operator == '-' || operator == '*' || operator == '/' || operator == '%';
+    // checks if the given token is a valid operator (+, -, *, /, %)
+    public boolean isOperator(String operator) {
+        return operator.equals("+") || operator.equals("-") || operator.equals("*")
+                || operator.equals("/") || operator.equals("%");
     }
 
     // checks if the given token represents an integer
@@ -79,7 +80,7 @@ public class InfixAndPostfix {
                 char symbol = token.charAt(0);
                 if (isOpenParentheses(token)) {
                     pushToStack(token);
-                } else if (isOperator(symbol)) {
+                } else if (isOperator(token)) {
                     while (!isEmptyStack() && !isOpenParentheses(top.getData()) &&
                            getPrecedence(top.getData().charAt(0)) >= getPrecedence(symbol)) {
                         output.append(popToStack().getData()).append(" ");
@@ -111,7 +112,7 @@ public class InfixAndPostfix {
             String token = tokenizer.nextToken();
             if (isInteger(token)) {
                 pushToStack(token);
-            } else if (isOperator(token.charAt(0))) {
+            } else if (isOperator(token)) {
                 if (isEmptyStack()) return "Invalid Expression";
                 Node<String> op2Node = popToStack();
                 if (isEmptyStack()) return "Invalid Expression";

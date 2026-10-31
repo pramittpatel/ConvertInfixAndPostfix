@@ -1,7 +1,36 @@
 1. (3 points) What is the time complexity of each method defined in the
 convertToPostfix and convertToInfix except the constructors. Show work.
-Time Complexity: O(n) for both methods, where n is the number of tokens in the expression string.
-Work: Each token in the expression string is iterated through exactly once. Inside the loop, push and pop operations on the reference-based linked list take constant time O(1) because insertions and deletions occur at the head reference. Therefore, processing n tokens scales linearly with O(n).
+Let n = the number of tokens in the expression.
+
+pushToStack: O(1)
+Work: It creates one new Node and points top to it. This is a fixed number of steps no matter how big the stack is.
+
+popToStack: O(1)
+Work: It saves the top Node, moves top to the next Node, and removes the link. This is a fixed number of steps.
+
+isEmptyStack: O(1)
+Work: It does one comparison (top == null).
+
+isOpenParentheses: O(1)
+Work: It compares the token to "(" once. Tokens are a single character.
+
+isClosedParentheses: O(1)
+Work: It compares the token to ")" once. Tokens are a single character.
+
+isOperator: O(1)
+Work: It compares the token to the 5 operators (+, -, *, /, %). At most 5 comparisons, which is constant.
+
+isInteger: O(1)
+Work: Integer.parseInt reads each character of the token once. Operands are single digits, so it reads 1 character.
+
+getPrecedence (helper): O(1)
+Work: At most 2 if-checks, which is constant.
+
+convertToPostfix: O(n)
+Work: The main while loop reads each of the n tokens once. Each operator or "(" is pushed onto the stack once and popped at most once, so all the inner while loops together do at most n pops in total. Every push, pop, and check above is O(1). Total: about n reads + n pushes + n pops = 3n steps, which is O(n).
+
+convertToInfix: O(n)
+Work: The while loop reads each of the n tokens once. Each number is pushed once, and each operator pops 2 entries and pushes 1 new entry. Every push, pop, and check above is O(1). Total: a constant amount of work per token, so n tokens is O(n).
 
 2. (3 points) Why did we choose to use a Stack instead of Queue structure to evaluate the
 postfix expression?
