@@ -5,8 +5,8 @@ import java.util.Scanner;
 // main executable class with console menu loop
 public class ConvertInfixAndPostfix {
     // 
-    // Group Members: [Your Name]
-    // Date: November 20, 2026
+    // Group Members: Pramit Patel, Rohan Karve
+    // Date: Oct 30, 2026
     // Course: Data Structures and Algorithm Analysis (CSCI 3200)
     // Project Description: Project 3 - Convert Infix and Postfix Expressions
     //

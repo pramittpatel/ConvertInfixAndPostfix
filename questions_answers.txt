@@ -1,0 +1,18 @@
+1. (3 points) What is the time complexity of each method defined in the
+convertToPostfix and convertToInfix except the constructors. Show work.
+Time Complexity: O(n) for both methods, where n is the number of tokens in the expression string.
+Work: Each token in the expression string is iterated through exactly once. Inside the loop, push and pop operations on the reference-based linked list take constant time O(1) because insertions and deletions occur at the head reference. Therefore, processing n tokens scales linearly with O(n).
+
+2. (3 points) Why did we choose to use a Stack instead of Queue structure to evaluate the
+postfix expression?
+Answer: A Stack operates on a Last-In-First-Out (LIFO) principle, which is required to properly handle operator precedence and nested parentheses when parsing mathematical expressions. Conversely, a Queue uses First-In-First-Out (FIFO), which would reverse the order of operands and operators incorrectly.
+Source: Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.
+
+3. (3 points) Identify and describe three (3) additional direct application of stacks in
+computer science.
+Function Call Stack (Call Stack): Used by programming language runtimes to manage active subroutines, local variables, and return addresses when functions are nested or called sequentially.
+Undo / Redo Mechanisms: Used in software applications (such as text editors and graphic design suites) to store state history so users can revert actions in reverse chronological order.
+Depth-First Search (DFS): Used in graph and tree traversal algorithms to explore as far as possible along each branch before backtracking.
+Source: Sedgewick, R., & Wayne, K. (2011). Algorithms (4th ed.). Addison-Wesley. 
+
+4. Note: you are required to provide cited sources to support your answer to questions 2 & 3.
