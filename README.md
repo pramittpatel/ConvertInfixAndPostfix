@@ -13,7 +13,7 @@ Converts math expressions between infix (`( 1 + 2 ) * 3`) and postfix (`1 2 + 3 
 | `src/CSCI3200/Node.java` | Node class for the linked stack |
 | `src/CSCI3200/InfixAndPostfix.java` | Stack operations and the conversion logic |
 | `src/CSCI3200/ConvertInfixAndPostfix.java` | Console menu program |
-| `src/CSCI3200/InfixAndPostfixGUI.java` | Swing GUI version |
+| `src/CSCI3200/InfixAndPostfixGUI.java` | JavaFX GUI version |
 
 ## How to run
 
