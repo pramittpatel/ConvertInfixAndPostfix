@@ -1,71 +1,72 @@
 package CSCI3200;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 
-// GUI application for Infix and Postfix conversion
-public class InfixAndPostfixGUI extends JFrame {
-    private JTextField inputField;
-    private JLabel resultLabel;
-    private JRadioButton infixToPostfixRadio;
-    private JRadioButton postfixToInfixRadio;
+// GUI application for Infix and Postfix conversion using JavaFX
+public class InfixAndPostfixGUI extends Application {
+    private TextField inputField;
+    private Label resultLabel;
+    private RadioButton infixToPostfixRadio;
+    private RadioButton postfixToInfixRadio;
     private InfixAndPostfix converter;
 
-    public InfixAndPostfixGUI() {
-        // initialize the converter logic object
+    public void start(Stage primaryStage) {
+        // Initialize the converter logic object
         converter = new InfixAndPostfix();
 
-        // window settings
-        setTitle("Infix & Postfix Converter - CSCI 3200");
-        setSize(450, 250);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // center on screen
-        setLayout(new GridLayout(5, 1, 10, 10));
-
         // 1. Radio Buttons for Mode Selection
-        infixToPostfixRadio = new JRadioButton("Infix to Postfix", true);
-        postfixToInfixRadio = new JRadioButton("Postfix to Infix");
+        infixToPostfixRadio = new RadioButton("Infix to Postfix");
+        infixToPostfixRadio.setSelected(true);
+        postfixToInfixRadio = new RadioButton("Postfix to Infix");
 
-        ButtonGroup group = new ButtonGroup();
-        group.add(infixToPostfixRadio);
-        group.add(postfixToInfixRadio);
+        ToggleGroup group = new ToggleGroup();
+        infixToPostfixRadio.setToggleGroup(group);
+        postfixToInfixRadio.setToggleGroup(group);
 
-        JPanel radioPanel = new JPanel();
-        radioPanel.add(infixToPostfixRadio);
-        radioPanel.add(postfixToInfixRadio);
+        HBox radioPanel = new HBox(20, infixToPostfixRadio, postfixToInfixRadio);
+        radioPanel.setAlignment(Pos.CENTER);
 
         // 2. Input Panel (Label + Text Field)
-        JPanel inputPanel = new JPanel(new FlowLayout());
-        JLabel inputLabel = new JLabel("Expression: ");
-        inputField = new JTextField(20);
-        inputPanel.add(inputLabel);
-        inputPanel.add(inputField);
+        Label inputLabel = new Label("Expression: ");
+        inputField = new TextField();
+        inputField.setPrefColumnCount(20);
+
+        HBox inputPanel = new HBox(10, inputLabel, inputField);
+        inputPanel.setAlignment(Pos.CENTER);
 
         // 3. Convert Button
-        JButton convertButton = new JButton("Convert");
+        Button convertButton = new Button("Convert");
+        convertButton.setPrefWidth(120);
+
+        // Add event handler to the Convert button using lambda expression
+        convertButton.setOnAction(e -> handleConversion());
 
         // 4. Result Label
-        resultLabel = new JLabel("Result: ", SwingConstants.CENTER);
-        resultLabel.setFont(new Font("Serif", Font.BOLD, 14));
+        resultLabel = new Label("Result: ");
+        resultLabel.setFont(Font.font("Serif", FontWeight.BOLD, 14));
 
-        // Add action listener to the Convert button
-        convertButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                handleConversion();
-            }
-        });
-
-        // Add components to the frame
-        add(radioPanel);
-        add(inputPanel);
-        add(convertButton);
-        add(resultLabel);
+        // Main Layout
+        VBox root = new VBox(15, radioPanel, inputPanel, convertButton, resultLabel);
+        root.setAlignment(Pos.CENTER);
+        root.setPadding(new Insets(20));
+        
+        // Window settings
+        Scene scene = new Scene(root, 450, 250);
+        primaryStage.setTitle("Infix & Postfix Converter - CSCI 3200");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
-    // handles event when Convert button is clicked
+    // Handles event when Convert button is clicked
     private void handleConversion() {
         String input = inputField.getText().trim();
 
@@ -81,15 +82,5 @@ public class InfixAndPostfixGUI extends JFrame {
             String result = converter.convertToInfix(input);
             resultLabel.setText("Infix: " + result);
         }
-    }
-
-    // main method to run the GUI
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new InfixAndPostfixGUI().setVisible(true);
-            }
-        });
     }
 }

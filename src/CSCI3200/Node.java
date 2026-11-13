@@ -1,6 +1,6 @@
 package CSCI3200;
 
-// Node class for the reference-based stack
+// Generic Node class for the reference-based stack
 public class Node<T> {
     private T data;
     private Node<T> next;
