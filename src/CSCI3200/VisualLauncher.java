@@ -13,6 +13,11 @@ import javafx.application.Application;
 /*
     Reference Github Repository: https://github.com/pramittpatel/ConvertInfixAndPostfix
 
+    To clone the repository IN VS CODE, you can use the following command in your terminal: 
+        git clone https://github.com/pramittpatel/ConvertInfixAndPostfix.git
+    To clone the repository in Eclipse:
+        1. File > Import > Git > Projects from Git (with Smart import) > Clone URI > paste the repository link > Next > Next > Finish
+
     To run this class, you need to add a external library of JavaFX SDK for the project.
     You can download the JavaFX SDK from the official website: https://gluonhq.com/products/javafx/
         Pick the OS, the architecture, and the version of JavaFX you want to use, based on what java version you are using.

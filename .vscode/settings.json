@@ -1,5 +1,6 @@
 {
     "java.project.referencedLibraries": [
+        "lib/**/*.jar",
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.base.jar",
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.controls.jar",
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.fxml.jar",
@@ -11,9 +12,5 @@
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jdk.jsobject.jar",
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jfx.incubator.input.jar",
         "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jfx.incubator.richtext.jar"
-    ],
-    "java.project.sourcePaths": [
-        "ConvertInfixAndPostfix\\src",
-        "src"
     ]
 }
