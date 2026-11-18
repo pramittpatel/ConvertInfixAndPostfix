@@ -1,16 +1,19 @@
 {
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.base.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.controls.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.fxml.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.graphics.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.media.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.swing.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx.web.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\javafx-swt.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\jdk.jsobject.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\jfx.incubator.input.jar",
-        "c:\\Users\\karve\\Javafx sdk\\openjfx-27.0.1_windows-x64_bin-sdk\\javafx-sdk-27.0.1\\lib\\jfx.incubator.richtext.jar"
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.base.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.controls.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.fxml.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.graphics.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.media.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.swing.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx.web.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\javafx-swt.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jdk.jsobject.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jfx.incubator.input.jar",
+        "c:\\Users\\karve\\Downloads\\javafx-sdk-27.0.1.1\\lib\\jfx.incubator.richtext.jar"
+    ],
+    "java.project.sourcePaths": [
+        "ConvertInfixAndPostfix\\src",
+        "src"
     ]
 }
